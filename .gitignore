@@ -1,0 +1,6 @@
+# Ignore pinegrow backup files
+_pgbackup/
+icons/
+pinegrow.json
+sidebar/
+.DS_Store

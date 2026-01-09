@@ -1,0 +1,391 @@
+/* Colors
+#134F5C marine green, #B24040 dark red, #1C4587 dark blue 1, #D0AB1E gold, #B6D7A8 light green, #06396a dark blue 2, #eefffe mint green, #ffe7aa dark  yellow
+Backgrounds - red  #B24040, light yellow #fff2cc, blue #1C4587, gold #ceaa37
+Fonts - 'Cabin', 'Montserrat', 'Play', 'Raleway', 'Barlow', 'Poppins', 'Playfair' 'Spectral', */
+@import url(https://fonts.googleapis.com/css?family=Play:400,600,700);
+
+html {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-blend-mode: color-dodge;
+    background-color: #1C4587;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' 	viewBox='0 0 24 24'%3E%3Cg fill='%2392a5ac' fill-opacity='0.4'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+    background-position: 50% 50%;
+    background-size: 25px 25px;
+    font-family: 'Play', 'sans serif';
+    font-size: calc(14px + 0.5vw);
+    line-height: calc(1.0em + 0.15vw);
+    min-height: 100%;
+    width: auto;
+    margin: calc(1em + 0.5vw);
+    padding: calc (1em - 0.5vw);
+}
+
+/* *******************************************  Header & Logo  ****************************************** */
+@media (max-width: 85.695146310711em) {
+}
+
+.wrapper {
+    top: .10em;
+    justify-content: center;
+    display: grid;
+    grid-template-areas: '. . . .' '. header header .' '. navigation content .' '. footer footer .';
+    grid-template-columns: 1fr 20.074997671616em minmax(20.074997671616em, 85.695146310711em) 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 1.5em;
+    height: 100%vh;
+    background-color: #ffffff;
+}
+
+@media (max-width: 30.112496507424em) {
+    body {
+        font-size: 1.15rem;
+        margin: 0 auto;
+        padding: 2.5em;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-areas: 'header' 'navigation' 'content' 'footer';
+        grid-template-columns: 20.074997671616em;
+        grid-template-rows: auto;
+        grid-gap: inherit;
+        width: 20em;
+        margin: 0 -2em 0 0;
+        padding: 0 .06em 0 .65em;
+    }
+
+    header {
+        text-align: center;
+        margin-top: 1em;
+    }
+
+    nav {
+       justify-content: center;
+    }
+}
+
+@media (max-width: 20.074997671616em)  {
+    body {
+
+        font-size: .75rem;
+        margin: 0 auto;
+        padding: 2.5em;
+
+    }
+
+    .wrapper {
+        left: -3.5em;
+        margin: 0 -2em 0 0;
+        padding: 0 .06em 0 .65em;
+    }
+
+}
+
+header {
+    grid-area: header;
+}
+
+.logo {
+    width: 14em;
+    height: auto;
+}
+
+img.photo {
+    filter: sepia(1) saturate(2.9) opacity(1) contrast(.7) hue-rotate(165deg);
+    -webkit-filter: sepia(1.0) saturate(2.9) opacity(1) contrast(.7) hue-rotate(165deg);
+    width: 280px;
+    height: auto;
+    box-shadow: 0px 16px 16px -12px rgba(52, 73, 94, 0.5);
+    border-radius: 1.75em 0 1.75em 0;
+    margin: 1.5em 0 0 0;
+}
+
+/* *******************************************  Divider ****************************************** */
+.example {
+    display: flex;
+    flex-direction: row;
+    width: auto-flow;
+}
+
+.example div {
+    border: 1px solid #fff;
+    height: .35em;
+    width: 1.25em;
+}
+
+.ex1 div:nth-child(4n+1) {
+    background: #ceaa37;
+}
+
+.ex1 div:nth-child(4n+2) {
+    background: #1C4587;
+}
+
+.ex1 div:nth-child(4n+3) {
+    background: #B24040;
+}
+
+.ex1 div:nth-child(4n+4) {
+    background: #134F5C;
+}
+
+/* *******************************************  Navigation  ****************************************** */
+nav {
+    grid-area: navigation;
+    width: 18.82031031714em;
+}
+
+nav ul {
+    display: grid;
+    justify-content: space-between;
+    list-style: none;
+    position: inherit;
+    background: #ceaa37;
+    padding: 1.25em;
+}
+
+nav ul li {
+    display: block;
+}
+
+nav a {
+    display: block;
+    padding: 2px 2px 2px 0px;
+    color: #1C4587;
+    text-decoration: none;
+    border-bottom: 2px solid #1C4587;
+}
+
+nav a:hover {
+    border-bottom: 2px solid #B24040;
+    color: #B24040;
+}
+
+nav a:active {
+    border-bottom: 2px solid #B24040;
+    color: #B24040;
+}
+
+/* *******************************************  Main  ****************************************** */
+main {
+    grid-area: content;
+    justify-content: center;
+    width: 90%;
+    counter-reset: step;
+}
+
+main > p {
+    padding: 0 1.25em .25em  5.25em;
+    margin: 0 -2em 0 -.15;
+}
+
+p.step {
+    padding: 0 1.5em .75em 1.5em;
+}
+
+ ol > li {
+    padding: 0 .25em .75em 0.25em;
+    margin: 0 -1.25em 0 -0.75em;
+}
+
+p.step::before {
+    counter-increment: step;
+    content: " " counter(step) ". ";
+    color: #134F5C;
+    font-weight: 600;
+    padding-right: .25em;
+}
+
+h1 {
+    font-size: 1.5em;
+    color: #134F5C;
+    line-height: 1.10em;
+    padding: -4px 10px;
+    letter-spacing: .015em;
+}
+
+h2 {
+    font-size: 1.35rem;
+    color: #1C4587;
+    line-height: 1.10em;
+    margin: auto;
+}
+
+h3 {
+    margin-bottom: -.75em;
+    font-weight: 300;
+    color: #3E3E3E;
+}
+
+header > p {
+    float: right;
+    padding-top: 1.25em;
+    font-size: 1.15em;
+    font-weight: 600;
+}
+
+header > .logo {
+    justify-items: center;
+}
+
+@media (max-width: 20.074997671616em), (max-width:30.112496507424em) {
+    header > p {
+        width: 100%;
+        padding-top: 0;
+        font-size: 1em;
+        margin: .5em 0 .5em 0;  
+        text-align: center;
+    }
+}
+
+em {
+    color: #134F5C;
+}
+
+.bullet_text--highlight {
+    color: #B24040;
+    font-weight: 600;
+}
+
+a:link {
+    color: #1C4587;
+    text-decoration: none;
+}
+
+a.current {
+    color: #1b4f5b;
+    border-bottom-color: #134F5C;
+    font-weight: 600;
+}
+
+/* a.current::after {
+    color: inherit;
+    content:"\1F4B2"; 
+    padding-left: 2px; 
+}
+    background-image:  url(../imgs/starBullet.svg);
+    display: inline-flex;
+    width: 10px;
+
+}    
+
+
+/* ********************************************  Bullets v2 ****************************************** */
+main > ul.noBullet {
+    list-style-type: none;
+    padding: 0 .25em 0 1.15em;
+    margin: 0 -1.25em 0 -1.25em; 
+}
+
+li.starBullet {
+    background: url("../imgs/starBullet.svg") no-repeat left top;
+    background-size: 24px;
+    padding: 0 1.5em .75em 1.5em;
+
+}
+
+/* ********************************************  FAQ v2  ****************************************** */
+.faq {
+    padding: 0 0 40px 30px;
+    background: #ceaa37;
+    font-size: 1.15rem;
+}
+
+.faq-details[open] .faq-summary:before {
+    content: "A - ";
+    -webkit-animation: cat 0.2s cubic-bezier(0.01, 0.29, 0.38, 2.37);
+    animation: cat 0.2s cubic-bezier(0.01, 0.29, 0.38, 2.37);
+}
+
+.faq-summary {
+    list-style-image: none;
+    cursor: pointer;
+    padding: 20px 60px;
+    position: relative;
+}
+
+.faq-summary:before {
+    content: "Q + ";
+    position: absolute;
+    top: calc(50% - 18px);
+    left: 0;
+}
+
+.faq-summary:focus {
+    outline: none;
+}
+
+.faq-summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-summary::-moz-details-marker {
+    display: none;
+}
+
+.speech {
+    display: inline-block;
+    margin: 20px 0 0 7px;
+    padding: 20px;
+    background: #ceaa37;
+    position: relative;
+    -webkit-animation: speech 0.3s cubic-bezier(0.01, 0.29, 0.38, 2.37);
+    animation: speech 0.3s cubic-bezier(0.01, 0.29, 0.38, 2.37);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+}
+
+.speech:before {
+    content: "";
+    position: absolute;
+    border: 8px solid transparent;
+    top: -16px;
+    left: 0;
+    border-bottom-color: #ffffff;
+}
+
+/* ********************************************  Customer Quotes  ****************************************** */
+q {
+    border-radius: 80px 10px 10px 10px;
+    -moz-border-radius: 80px 10px 10px 10px;
+    -webkit-border-radius: 80px 10px 10px 10px;
+    border: 0px solid #000000;
+}
+
+/* ********************************************  Forms  ****************************************** */
+form {
+    margin: 0 auto;
+    width: auto;
+    padding: 20px;
+    box-shadow: 0px 0px 14px -2px rgba(102,102,102,1);
+}
+
+form.inner {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="phone"],
+textarea {
+    border: none;
+    padding: 10px 0 10px 10px;
+    background: #ddd;
+}
+
+/* ********************************************  Footer ****************************************** */
+footer {
+    grid-area: footer;
+    width: auto;
+    color: #1C4587;
+    text-align: center;
+    padding-bottom: calc(1.0em - .75vh);
+}
+

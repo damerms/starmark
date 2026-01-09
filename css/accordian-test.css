@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+.faq-title {
+    line-height: 2;
+    font-size: 2rem;
+    background-color: #1C4587;
+    color: #FFF;
+    padding: 0 20px;
+    letter-spacing: 1px;
+}
+
+.faq {
+    padding: 20px;
+    background: #DDB73D;
+    font-size: 1.5rem;
+}
+
+.faq-details[open] .faq-summary:before {
+    content: "A - ";
+    -webkit-animation: cat 0.2s cubic-bezier(0.01, 0.29, 0.38, 2.37);
+    animation: cat 0.2s cubic-bezier(0.01, 0.29, 0.38, 2.37);
+}
+
+.faq-summary {
+    list-style-image: none;
+    cursor: pointer;
+    padding: 20px 60px;
+    position: relative;
+}
+
+.faq-summary:before {
+    content: "Q + ";
+    position: absolute;
+    top: calc(50% - 18px);
+    left: 0;
+}
+
+.faq-summary:focus {
+    outline: none;
+}
+
+.faq-summary::-webkit-details-marker {
+    display: none;
+}
+
+.speech {
+    display: inline-block;
+    margin: 20px 0 0 7px;
+    padding: 20px;
+    background: #FFF;
+    position: relative;
+    -webkit-animation: speech 0.3s cubic-bezier(0.01, 0.29, 0.38, 2.37);
+    animation: speech 0.3s cubic-bezier(0.01, 0.29, 0.38, 2.37);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+}
+
+.speech:before {
+    content: "";
+    position: absolute;
+    border: 8px solid transparent;
+    top: -16px;
+    left: 0;
+    border-bottom-color: #FFF;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+@-webkit-keyframes speech {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(0.98);
+        transform: scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes speech {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(0.98);
+        transform: scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@-webkit-keyframes cat {
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+}
+
+@keyframes cat {
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+}
