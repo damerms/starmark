@@ -1,4 +1,4 @@
-# StarMark Business Solutions — Platform Showcase
+# StarMark Business Solutions
 *Cost Recovery & Efficiency Architecture*
 
 ---
