@@ -21,7 +21,7 @@ This project is currently **Archived** and is intended for **showcase purposes o
 
 ### Links
 * **Live Site:** [www.starmark.biz](https://www.starmark.biz)
-* **Portfolio Contact:** [LinkedIn](https://www.linkedin.com/in/davidmermelstein/)
+* **Portfolio Contact:** [LinkedIn](https://www.linkedin.com/in/merms/)
 
 ---
 *Developed for the Starmark Group. All rights reserved.*
